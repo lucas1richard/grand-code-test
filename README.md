@@ -1,14 +1,17 @@
-# GRAND test
+# GRAND Front end code test
 
 In here you will find the grand code test, theres a couple things we would like you to accomplish in here and we will work through them together.
 
 - Lets make a small app that uses the github rest api to fetch a users repositories.
-- it must select a user and then list their public repos.
+- It must search and select a user and then list their public repos.
 - It should use redux and the store will be preconfigured for you. The choice to use an immutablejs reducer is yours.
 - You will need to create your own reducers/ actions/ constants/ selectors and test them fully!
-- Enzyme will be included for your testing needs for components and well as enzyme to json.
-- We use styled-components here so that library will also be included, its very simple to use. [styled-components](https://styled-components.com)
-- Separate dumb and smart components
+- Enzyme will be included for your testing needs for components and well as enzymeToJson.
+- We use styled-components here so that library will also be included, its very simple to use. [styled-components](https://styled-components.com) ( This is optional, you can also just use css if thats easier for you).
+- Separate dumb and smart components (Ones that are connected to a store and purely ui)
+- The ui choices are up to you but generally just one input and and a list is good enough.
+- Feel free to reach out if you need any help or have any questions. 
+- Folder structure is also up to you. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
