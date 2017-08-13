@@ -12,6 +12,8 @@ In here you will find the grand code test, theres a couple things we would like 
 - The ui choices are up to you but generally just one input and and a list is good enough.
 - Feel free to reach out if you need any help or have any questions. 
 - Folder structure is also up to you. 
+- When finished deploy the site statically somewhere, either to an s3 bucket or a github pages and send over the cloned repo with your code.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
