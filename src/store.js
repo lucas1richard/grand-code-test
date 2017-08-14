@@ -3,8 +3,7 @@
  */
 
 import { createStore, applyMiddleware, compose } from 'redux';
-import { fromJS } from 'immutable';
-
+import thunkMiddleware from 'redux-thunk';
 import createReducer from './reducers';
 
 
@@ -12,6 +11,7 @@ export default function configureStore(initialState = {}) {
   // Create the store with two middlewares
   // 2. routerMiddleware: Syncs the location/URL path to the state
   const middlewares = [
+    thunkMiddleware
   ];
 
   const enhancers = [
@@ -29,21 +29,21 @@ export default function configureStore(initialState = {}) {
 
   const store = createStore(
     createReducer(),
-    fromJS(initialState),
-    composeEnhancers(...enhancers)
+    // fromJS(initialState),
+    composeEnhancers(...enhancers),
   );
 
   /* istanbul ignore next */
-  if (module.hot) {
-    module.hot.accept('./reducers', () => {
-      import('./reducers').then((reducerModule) => {
-        const createReducers = reducerModule.default;
-        const nextReducers = createReducers();
+  // if (module.hot) {
+  //   module.hot.accept('./reducers', () => {
+  //     import('./reducers').then((reducerModule) => {
+  //       const createReducers = reducerModule.default;
+  //       const nextReducers = createReducers();
 
-        store.replaceReducer(nextReducers);
-      });
-    });
-  }
+  //       store.replaceReducer(nextReducers);
+  //     });
+  //   });
+  // }
 
   return store;
 }

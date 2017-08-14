@@ -4,9 +4,9 @@
  */
 
 // immutable js reducer is ready to go for you
-import { combineReducers } from 'redux-immutable';
-// import { combineReducers } from 'redux';
-import { fromJS } from 'immutable';
+// import { combineReducers } from 'redux-immutable';
+import { combineReducers } from 'redux';
+// import { fromJS } from 'immutable';
 import app from './containers/App/reducer';
 
 export default function createReducer() {
