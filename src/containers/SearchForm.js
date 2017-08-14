@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {requestRepos} from './App/reducer';
 import {Input, Label} from '../components/styled';
 
-class SearchForm extends React.Component {
+export class SearchForm extends React.Component {
   constructor() {
     super();
     this.state = {
